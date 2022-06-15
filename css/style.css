@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background-color: black;
+}
+
+#logoNavbar{
+    width: 60px;   
+    height: 60px;
+    border: solid rosybrown;
+    border-radius: 50px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    background-image: url(http://placekitten.com/1500/200);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-bottom: solid #ce9835 5px;
+}
+
+.header__titulo{
+    color: #05d1d1;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+.header a:hover{
+    color: rgba(206, 152, 53, 0.603);
+}
+
+
+/* MAIN */
+.main{
+    background: radial-gradient(circle, rgba(111,111,111,0.6259904912836767) 0%, rgba(5,209,209,0.6624405705229794) 100%);
+    padding-bottom: 1px;
+}
+
+.main h2{
+    color:#4b4b4b;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    animation-name: textMove;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+.conteiner{
+    display: grid;
+    justify-content: space-around;
+    justify-items: end;
+    align-content: center;
+    grid-template-areas:
+        "historia1 historia2 historia3"
+        "historia4 historia5 historia6";
+}
+
+.conteiner div{
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #4b4b4b #f8b435 #4b4b4b #f8b435;
+    margin: 8px 0px;
+    text-align: center;
+}
+
+.conteiner div:hover{
+    border-radius: 50%;  
+    transition: .5s;
+    background-size: 104%;
+    
+}
+
+.conteiner a{
+    background-color: #4b4b4bb0;
+    color: #05d1d1;
+    display: inline-block;
+    padding: 8px;
+    margin-top: 50%;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.conteiner a:hover{
+    transform: scale(1.08);
+}
+
+.historia1 {
+    grid-area: historia1;
+    background-image: url(http://placekitten.com/250/250);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+.historia2 {
+    grid-area: historia2;
+    background-image: url(http://placekitten.com/251/251);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+.historia3 {
+    grid-area: historia3;
+    background-image: url(http://placekitten.com/252/252);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+.historia4 {
+    grid-area: historia4;
+    background-image: url(http://placekitten.com/253/253);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+.historia5 {
+    grid-area: historia5;
+    background-image: url(http://placekitten.com/254/254);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+.historia6 {
+    grid-area: historia6;
+    background-image: url(http://placekitten.com/255/255);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+}
+
+
+/* MAIN CONTACTO */
+.formulario {
+    background-image: radial-gradient(circle, rgba(5,209,209,0.6624405705229794) 0%, rgba(111,111,111,0.6259904912836767) 100%);
+    margin:20px 15px;
+    border-radius: 25px;
+    display: grid;
+    height: 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nombre comentario"
+        "email comentario"
+        "pais comentario"
+        "sexo comentario";
+
+}
+
+.nombre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: nombre;
+    align-items: center;
+}
+
+.nombre input{
+    padding: 8px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: email;
+    align-items: center;
+}
+
+.email input{
+    padding: 8px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.pais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: pais;
+    align-items: center;
+}
+
+.pais select{
+    padding: 8px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.sexo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: sexo;
+    align-items: center;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: comentario;
+    align-items: center;
+}
+
+.comentario textarea{
+    padding: 8px;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 3px;
+}
+
+.comentario input{
+    width: 70px;
+    padding: 3px 0px;
+    margin: 3px;
+}
+
+/* FOOTER */
+.footer{
+    background-color: #f8b435;
+    border-top: solid #4b4b4b 3px;
+}
+
+.footer__label{
+    display: flex;
+    padding: 15px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.footer span{
+    color: #4b4b4b;
+    margin: 5px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.footer input{
+    color: #05d1d1;
+    margin: 5px;
+    padding: 5px;
+    border: inset 5px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.footer ol{
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+.footer li:hover{
+    transform: scale(1.08);
+}
+
+.footer img{
+    margin: 0 10px 0 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+/* ANIMACIONES */
+@keyframes textMove{
+    0%{
+        transform: rotate(0deg);
+        transition: .4s;
+    }
+    33%{
+        transform: rotate(10deg);
+        transition: .4s;
+    }
+    66%{
+        transform: rotate(0deg);
+        transition: .4s;
+    }
+    100%{
+        transform: rotate(-10deg);
+        transition: .4s;
+    }
+
+}
+
+
+/* MEDIA QUERI  768PX */
+@media (max-width:768px) {
+    .header{
+        height: auto;
+        background-image: url(http://placekitten.com/1500/500);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+
+    .header ul {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 5px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .header li{
+        margin: 5px;
+    }
+
+    .conteiner{
+        display: grid;
+        justify-content: space-around;
+        justify-items: end;
+        align-content: center;
+        grid-template-areas:
+            "historia1 historia2"
+            "historia3 historia4"
+            "historia5 historia6";
+    }
+
+    .formulario {
+        margin:20px 15px;
+        border-radius: 25px;
+        display: grid;
+        height: 400px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "nombre nombre"
+            "email email"
+            "pais pais"
+            "sexo sexo"
+            "comentario comentario";
+    
+    }
+
+    .comentario textarea{
+        width: 310px;
+    }
+
+    .footer ol{
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* MEDIA QUIERI 425PX */
+@media (max-width:426px){
+    .conteiner{
+        display: grid;
+        justify-content: space-around;
+        justify-items: end;
+        align-content: center;
+        grid-template-areas:
+            "historia1"
+            "historia2"
+            "historia3"
+            "historia4"
+            "historia5"
+            "historia6";
+    }
+
+    .comentario textarea{
+        width: 260px;
+    }
+
+    .footer ol{
+        justify-content: center;
+    }
+}
